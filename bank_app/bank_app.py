@@ -6,6 +6,9 @@ class BankAccount(object):
     def make_deposit(self, amount):
         self.balance += amount
 
+    def make_withdrawal(self, amount):
+        self.balance -= amount
+
 
 bank_name=BankAccount('christian')
 
