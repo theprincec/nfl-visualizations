@@ -7,10 +7,10 @@ class BankAccount(object):
         self.balance = (self.balance + amount)
 
     def make_withdrawal(self, amount):
-        if (self.balance - amount) < 0:
-            print('insufficient funds. choose a smaller amount')
-        else:
+        if self.balance > amount:
             self.balance -= amount
+        else:
+            print('insufficient funds. choose a smaller amount')
 
     def check_balance(self, amount):
         self.balance = (self.balance - amount)
