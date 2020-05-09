@@ -1,29 +1,26 @@
-class BankAccount(object):
-    def __init__(self, object):
-        self.name = object
-        self.balance = 0
+from helpers import BankAccount
 
-    def make_deposit(self, amount):
-        self.balance += amount
+name = input('Hi, What is your name?  ')
 
-    def make_withdrawal(self, amount):
-        self.balance -= amount
+bank_account = BankAccount(name)
 
-    def check_balance(self, amount):
-        if (self.balance - amount) < 0:
-            print('insufficient funds')
+# initial_deposit = int(input(f"hi {name}, How much would you like to deposit?  $"))
+# bank_account.make_deposit(initial_deposit)
+# # print(bank_account.balance)
 
-    def is_balance_positive(self):
-        if self.balance < 0:
-            print('you do not have a positive balance')
+# print("select a number to make an action")
+print('1. Deposit')
+print('2. Withdrawal')
+initial_decision = int(input("select a number to make an action:  "))
+initial_option = ''
+# while initial_decision is 1 or 2:
+if initial_decision == 1:
+    initial_deposit = int(input(f"hi {name}, How much would you like to deposit?  $"))
+    bank_account.make_deposit(initial_deposit)
+elif initial_decision == 2:
+    initial_withdrawal = int(input(f"hi {name}, How much would you like to withdraw?  $"))
+    bank_account.make_withdrawal(initial_withdrawal)
+else:
+    pass  
 
-
-# christian=BankAccount('christian')
-
-# christian.make_deposit(500)
-
-print(christian.__dict__)
-
-name = input('hi what is your name?')
-
-print(f"hi {name}")
+# print(f'your balance is:  ${bank_account.balance}')
