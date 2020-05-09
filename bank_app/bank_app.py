@@ -10,7 +10,7 @@ class BankAccount(object):
         self.balance -= amount
 
     def check_balance(self, amount):
-        if (self.balance - amount) >= 0:
+        if (self.balance - amount) < 0:
             print('insufficient funds')
 
     def is_balance_positive(self):
@@ -18,8 +18,12 @@ class BankAccount(object):
             print('you do not have a positive balance')
 
 
-christian=BankAccount('christian')
+# christian=BankAccount('christian')
 
-christian.make_deposit(500)
+# christian.make_deposit(500)
 
 print(christian.__dict__)
+
+name = input('hi what is your name?')
+
+print(f"hi {name}")
